@@ -1,5 +1,5 @@
 # Tutorials
-Here you find tutorials. Tutorial aim to explain concepts that are imprtant to choice modelling. They are complementary to the lecture materials and lab sessions. They do not contain any exercises. The current tutorials are:
+Here, you will find tutorials. Tutorials aim to explain concepts that are important to choice modelling. They are complementary to the lecture materials and lab sessions. They do not contain any exercises. The current tutorials are:
 1. Tutorial 1: The data generating process and bias
 2. Tutorial 2: The loglikelihood function
 3. Tutorial 3: Local versus global maxima
