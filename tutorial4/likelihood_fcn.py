@@ -4,10 +4,20 @@ import numpy as np
 b1max1, b2max1 =  2.0, 1.2 # Global maximum
 b1max2, b2max2 = -0.5, 2.0 # Local maximum
 
-# Function to plot the likelihood function
+# # Function to plot the likelihood function
 def likelihood_function(b1, b2):
     likelihood = 0.5 * np.exp(-((b1 - b1max1)**2 + (b2 - b2max1)**2)) + 0.4 * np.exp(-((b1 - b1max2)**2 + (b2 - b2max2)**2))
     return likelihood
+
+
+# Function to plot the likelihood function
+# def likelihood_function(b1, b2):
+#     likelihood = -((1-b1)**2 + 100*(b2-b1**2)**6)
+#     return likelihood
+
+# b1max1, b2max1 = 1,1 
+# b1max2, b2max2 = -1,-1
+
 
 def gradient_ascent(start_point, stepsize, tolX, max_iter):
     
