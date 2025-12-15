@@ -7482,7 +7482,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Tutorial-0:-Debugging-common-error-messages-and-issues-in-Python-and-Biogeme">Tutorial 0: Debugging common error messages and issues in Python and Biogeme<a class="anchor-link" href="#Tutorial-0:-Debugging-common-error-messages-and-issues-in-Python-and-Biogeme">¶</a></h2>
+<h1 id="Tutorial-0:-Debugging-common-error-messages-and-issues-in-Python,-Pandas-and-Biogeme">Tutorial 0: Debugging common error messages and issues in Python, Pandas and Biogeme<a class="anchor-link" href="#Tutorial-0:-Debugging-common-error-messages-and-issues-in-Python,-Pandas-and-Biogeme">¶</a></h1>
 </div>
 </div>
 </div>
@@ -7493,7 +7493,27 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>This tutorial covers some of the most common error messages and issues that may arise when working with Python and Biogeme for discrete choice modelling. We will go through typical mistakes, explain the error messages, and provide solutions to fix them.</p>
+<p>This tutorial covers some of the most common error messages and issues that may arise when working with Python and Biogeme for discrete choice modelling. We will go through typical mistakes, explain the error messages, and provide solutions to fix them.<br/>
+This tutorial comprises the following sections:</p>
+<ol>
+<li><a href="#1-python-errors">Python errors</a><ul>
+<li>ModuleNotFoundError</li>
+<li>ERROR: Could not find a version</li>
+</ul>
+</li>
+<li><a href="#2.-pandas-errors">Pandas errors</a><ul>
+<li>FileNotFoundError:</li>
+</ul>
+</li>
+<li><a href="#3.-biogeme-errors">Biogeme errors</a><ul>
+<li>AttributeError: 'DataFrame' object has no attribute</li>
+<li>KeyError:</li>
+<li>BiogemeError: Error in the loglikelihood function.</li>
+<li>BiogemeError: The argument of MonteCarlo must contain a bioDraws.</li>
+<li>BiogemeError: The following elementary expressions are defined more than once.</li>
+</ul>
+</li>
+</ol>
 </div>
 </div>
 </div>
@@ -7502,14 +7522,12 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Import the libraries</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Let's first import some native Python libraries</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 <span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 </pre></div>
 </div>
 </div>
@@ -7522,7 +7540,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="1.-Python-errors">1. Python errors<a class="anchor-link" href="#1.-Python-errors">¶</a></h1>
+<h2 id="1.-Python-errors">1. Python errors<a class="anchor-link" href="#1.-Python-errors">¶</a></h2>
 </div>
 </div>
 </div>
@@ -7685,7 +7703,23 @@ The correct path to look for the 'utils' folder should be:
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="1.-Pandas-errors">1. Pandas errors<a class="anchor-link" href="#1.-Pandas-errors">¶</a></h1>
+<h2 id="1.-Pandas-errors">1. Pandas errors<a class="anchor-link" href="#1.-Pandas-errors">¶</a></h2>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=494a3d93">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Import pandas</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+</pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -7807,7 +7841,9 @@ File <span class="ansi-green-fg">~/.pyenv/versions/SEN122A_2025/lib/python3.12/s
 <span class="c1"># To fix this, ensure that the path pointing to the data file is correct.</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Python looked for the data file in the path:</span><span class="se">\n</span><span class="si">{</span><span class="n">data_path</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 
-<span class="c1"># However, the file is not located there. It is located in the 'data' folder one level up from the current working directory.</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">The specified path is relative to the current working directory:</span><span class="se">\n</span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+<span class="c1"># However, the file is not located there. It is located in the 'data' folder which is located in the current working directory.</span>
 <span class="n">data_path</span> <span class="o">=</span>  <span class="n">Path</span><span class="p">(</span><span class="sa">f</span><span class="s1">'data/synthetic_VTTdata_tutorial1.dat'</span><span class="p">)</span> <span class="c1"># &lt;-- FIXED by specifying the correct path to the data file</span>
 
 <span class="c1"># Now, we can load the data using the correct path</span>
@@ -7828,7 +7864,10 @@ File <span class="ansi-green-fg">~/.pyenv/versions/SEN122A_2025/lib/python3.12/s
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>Python looked for the data file in the path:
-/Users/sandervancranenburgh/Documents/Repos_and_data/SEN1221/tutorials/tutorial0/data/synthetic_VTTdata_tutorial1.dat
+/data/synthetic_VTTdata_tutorial1.dat
+
+The specified path is relative to the current working directory:
+/Users/sandervancranenburgh/Documents/Repos_and_data/SEN1221/tutorials/tutorial0
 </pre>
 </div>
 </div>
@@ -7921,7 +7960,7 @@ File <span class="ansi-green-fg">~/.pyenv/versions/SEN122A_2025/lib/python3.12/s
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="3.-Biogeme-errors">3. Biogeme errors<a class="anchor-link" href="#3.-Biogeme-errors">¶</a></h1>
+<h2 id="3.-Biogeme-errors">3. Biogeme errors<a class="anchor-link" href="#3.-Biogeme-errors">¶</a></h2>
 </div>
 </div>
 </div>

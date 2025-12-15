@@ -1,6 +1,6 @@
 # Tutorials
 Here, you will find tutorials. Tutorials aim to explain concepts that are important to choice modelling. They are extensions of the lecture materials and lab sessions, providing a deeper understanding of the topics covered. They do not contain any exercises. The current list of topics is:
-- Tutorial 0: Debugging common error messages and issues in Python and Biogeme (new)
+- Tutorial 0: Debugging common error messages and issues in Python, Pandas and Biogeme (new)
 - Tutorial 1: The data generating process and bias
 - Tutorial 2: The loglikelihood function
 - Tutorial 3: The concave likelihood function of the linear-additive RUM-MNL model
