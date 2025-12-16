@@ -7496,22 +7496,22 @@ a.anchor-link {
 <p>This tutorial covers some of the most common error messages and issues that may arise when working with Python and Biogeme for discrete choice modelling. We will go through typical mistakes, explain the error messages, and provide solutions to fix them.<br/>
 This tutorial comprises the following sections:</p>
 <ol>
-<li><a href="#1-python-errors">Python errors</a><ul>
-<li>ModuleNotFoundError</li>
-<li>ERROR: Could not find a version</li>
-</ul>
+<li><a href="#1-python-errors">Python errors</a><ol>
+<li><code>ModuleNotFoundError</code></li>
+<li><code>ERROR: Could not find a version that satisfies the requirement</code></li>
+</ol>
 </li>
-<li><a href="#2.-pandas-errors">Pandas errors</a><ul>
-<li>FileNotFoundError:</li>
-</ul>
+<li><a href="#2.-pandas-errors">Pandas errors</a><ol>
+<li><code>FileNotFoundError:</code></li>
+</ol>
 </li>
-<li><a href="#3.-biogeme-errors">Biogeme errors</a><ul>
-<li>AttributeError: 'DataFrame' object has no attribute</li>
-<li>KeyError:</li>
-<li>BiogemeError: Error in the loglikelihood function.</li>
-<li>BiogemeError: The argument of MonteCarlo must contain a bioDraws.</li>
-<li>BiogemeError: The following elementary expressions are defined more than once.</li>
-</ul>
+<li><a href="#3.-biogeme-errors">Biogeme errors</a><ol>
+<li><code>AttributeError: 'DataFrame' object has no attribute</code></li>
+<li><code>KeyError:</code></li>
+<li><code>BiogemeError: Error in the loglikelihood function.</code></li>
+<li><code>BiogemeError: The argument of MonteCarlo must contain a bioDraws.</code></li>
+<li><code>BiogemeError: The following elementary expressions are defined more than once.</code></li>
+</ol>
 </li>
 </ol>
 </div>
@@ -7551,7 +7551,8 @@ This tutorial comprises the following sections:</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="ModuleNotFoundError:-No-module-named-'utils'">ModuleNotFoundError: No module named 'utils'<a class="anchor-link" href="#ModuleNotFoundError:-No-module-named-'utils'">¶</a></h4>
+<br/>
+<p><code>ModuleNotFoundError: No module named 'utils'</code></p>
 </div>
 </div>
 </div>
@@ -7645,7 +7646,8 @@ The correct path to look for the 'utils' folder should be:
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="ERROR:-Could-not-find-a-version-that-satisfies-the-requirement">ERROR: Could not find a version that satisfies the requirement<a class="anchor-link" href="#ERROR:-Could-not-find-a-version-that-satisfies-the-requirement">¶</a></h4>
+<br/>
+<p><code>ERROR: Could not find a version that satisfies the requirement</code></p>
 </div>
 </div>
 </div>
@@ -7730,7 +7732,8 @@ The correct path to look for the 'utils' folder should be:
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="FileNotFoundError:-%5BErrno-2%5D-No-such-file-or-directory:">FileNotFoundError: [Errno 2] No such file or directory:<a class="anchor-link" href="#FileNotFoundError:-%5BErrno-2%5D-No-such-file-or-directory:">¶</a></h4>
+<br/>
+<p><code>FileNotFoundError: [Errno 2] No such file or directory:</code></p>
 </div>
 </div>
 </div>
@@ -7987,7 +7990,8 @@ The specified path is relative to the current working directory:
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="AttributeError:-'DataFrame'-object-has-no-attribute-'data'">AttributeError: 'DataFrame' object has no attribute 'data'<a class="anchor-link" href="#AttributeError:-'DataFrame'-object-has-no-attribute-'data'">¶</a></h4>
+<br/>
+<p><code>AttributeError: 'DataFrame' object has no attribute 'data'</code></p>
 </div>
 </div>
 </div>
@@ -8154,7 +8158,8 @@ B_TT -0.0825        0.0138        -5.99           0.0
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="KeyError:">KeyError:<a class="anchor-link" href="#KeyError:">¶</a></h4>
+<br/>
+<p><code>KeyError:</code></p>
 </div>
 </div>
 </div>
@@ -8163,7 +8168,7 @@ B_TT -0.0825        0.0138        -5.99           0.0
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Create a Biogeme database object from the pandas DataFrame </span>
@@ -8195,6 +8200,7 @@ B_TT -0.0825        0.0138        -5.99           0.0
 <span class="c1"># Create a dictionary called av to describe the availability conditions of each alternative, where 1 indicates that the alternative is available, and 0 indicates that the alternative is not available.</span>
 <span class="n">AV</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span> 
 
+<span class="c1"># Estimate the model</span>
 <span class="n">results_mnl</span> <span class="o">=</span> <span class="n">estimate_mnl</span><span class="p">(</span><span class="n">V</span><span class="p">,</span> <span class="n">AV</span><span class="p">,</span> <span class="n">CHOICE</span><span class="p">,</span> <span class="n">biodata</span><span class="p">,</span> <span class="n">model_name</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -8211,10 +8217,10 @@ B_TT -0.0825        0.0138        -5.99           0.0
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">KeyError</span>                                  Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[12], line 30</span>
-<span class="ansi-green-intense-fg ansi-bold">     27</span> <span style="color: rgb(95,135,135)"># Create a dictionary called av to describe the availability conditions of each alternative, where 1 indicates that the alternative is available, and 0 indicates that the alternative is not available.</span>
+Cell <span class="ansi-green-fg">In[19], line 31</span>
 <span class="ansi-green-intense-fg ansi-bold">     28</span> AV <span style="color: rgb(98,98,98)">=</span> {<span style="color: rgb(98,98,98)">1</span>: <span style="color: rgb(98,98,98)">1</span>, <span style="color: rgb(98,98,98)">2</span>: <span style="color: rgb(98,98,98)">1</span>} 
-<span class="ansi-green-fg">---&gt; 30</span> results_mnl <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">estimate_mnl</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">V</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">AV</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">CHOICE</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">biodata</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">model_name</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     30</span> <span style="color: rgb(95,135,135)"># Estimate the model</span>
+<span class="ansi-green-fg">---&gt; 31</span> results_mnl <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">estimate_mnl</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">V</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">AV</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">CHOICE</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">biodata</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">model_name</span><span class="ansi-yellow-bg">)</span>
 
 File <span class="ansi-green-fg">~/Documents/Repos_and_data/SEN1221/tutorials/utils/bio_estimation_fcns.py:20</span>, in <span class="ansi-cyan-fg">estimate_mnl</span><span class="ansi-blue-fg">(V, AV, CHOICE, database, model_name)</span>
 <span class="ansi-green-intense-fg ansi-bold">     17</span> LL <span style="color: rgb(98,98,98)">=</span> log(prob)
@@ -8398,7 +8404,8 @@ B_TT -0.0825        0.0138        -5.99           0.0
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="BiogemeError:-Error-in-the-loglikelihood-function.-Some-variables-are-not-inside-PanelLikelihoodTrajectory:">BiogemeError: Error in the loglikelihood function. Some variables are not inside PanelLikelihoodTrajectory:<a class="anchor-link" href="#BiogemeError:-Error-in-the-loglikelihood-function.-Some-variables-are-not-inside-PanelLikelihoodTrajectory:">¶</a></h4>
+<br/>
+<p><code>BiogemeError: Error in the loglikelihood function. Some variables are not inside PanelLikelihoodTrajectory:</code></p>
 </div>
 </div>
 </div>
@@ -8534,7 +8541,8 @@ B_TT -0.0825        0.0138        -5.99           0.0
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="BiogemeError:-The-argument-of-MonteCarlo-must-contain-a-bioDraws:">BiogemeError: The argument of MonteCarlo must contain a bioDraws:<a class="anchor-link" href="#BiogemeError:-The-argument-of-MonteCarlo-must-contain-a-bioDraws:">¶</a></h4>
+<br/>
+<p><code>BiogemeError: The argument of MonteCarlo must contain a bioDraws:</code></p>
 </div>
 </div>
 </div>
@@ -8712,7 +8720,8 @@ sigma_TC  0.7843        0.4060         1.93          0.05
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="BiogemeError:-The-following-elementary-expressions-are-defined-more-than-once:">BiogemeError: The following elementary expressions are defined more than once:<a class="anchor-link" href="#BiogemeError:-The-following-elementary-expressions-are-defined-more-than-once:">¶</a></h4>
+<br/>
+<p><code>BiogemeError: The following elementary expressions are defined more than once:</code></p>
 </div>
 </div>
 </div>
