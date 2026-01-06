@@ -7508,6 +7508,7 @@ This tutorial comprises the following sections:</p>
 <li><a href="#3.-biogeme-errors">Biogeme errors</a><ol>
 <li><code>AttributeError: 'DataFrame' object has no attribute</code></li>
 <li><code>KeyError:</code></li>
+<li><code>NameError:</code></li>
 <li><code>BiogemeError: Error in the loglikelihood function.</code></li>
 <li><code>BiogemeError: The argument of MonteCarlo must contain a bioDraws.</code></li>
 <li><code>BiogemeError: The following elementary expressions are defined more than once.</code></li>
@@ -8046,7 +8047,7 @@ The specified path is relative to the current working directory:
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">AttributeError</span>                            Traceback (most recent call last)
-<span class="ansi-green-fg">/var/folders/gm/c7whqvgd2h177ltnp_7z9pv5yjhzk2/T/ipykernel_35636/3420160964.py</span> in <span class="ansi-cyan-fg">?</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">/var/folders/gm/c7whqvgd2h177ltnp_7z9pv5yjhzk2/T/ipykernel_29952/3420160964.py</span> in <span class="ansi-cyan-fg">?</span><span class="ansi-blue-fg">()</span>
 <span class="ansi-green-intense-fg ansi-bold">     24</span> <span class="ansi-red-fg"># Create a dictionary called AV to describe the availability conditions of each alternative, where 1 indicates that the alternative is available, and 0 indicates that the alternative is not available.</span>
 <span class="ansi-green-intense-fg ansi-bold">     25</span> AV <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">{</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">:</span> <span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">:</span> <span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">}</span>
 <span class="ansi-green-intense-fg ansi-bold">     26</span> 
@@ -8168,7 +8169,7 @@ B_TT -0.0825        0.0138        -5.99           0.0
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Create a Biogeme database object from the pandas DataFrame </span>
@@ -8217,7 +8218,7 @@ B_TT -0.0825        0.0138        -5.99           0.0
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">KeyError</span>                                  Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[19], line 31</span>
+Cell <span class="ansi-green-fg">In[12], line 31</span>
 <span class="ansi-green-intense-fg ansi-bold">     28</span> AV <span style="color: rgb(98,98,98)">=</span> {<span style="color: rgb(98,98,98)">1</span>: <span style="color: rgb(98,98,98)">1</span>, <span style="color: rgb(98,98,98)">2</span>: <span style="color: rgb(98,98,98)">1</span>} 
 <span class="ansi-green-intense-fg ansi-bold">     30</span> <span style="color: rgb(95,135,135)"># Estimate the model</span>
 <span class="ansi-green-fg">---&gt; 31</span> results_mnl <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">estimate_mnl</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">V</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">AV</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">CHOICE</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">biodata</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">model_name</span><span class="ansi-yellow-bg">)</span>
@@ -8398,6 +8399,171 @@ B_TT -0.0825        0.0138        -5.99           0.0
 </div>
 </div>
 </div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b3f109ca">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<br/>
+<p><code>NameError: name '&lt;var&gt;' is not defined</code></p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=346d8b15">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Create a Biogeme database object from the pandas DataFrame </span>
+<span class="n">biodata</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Database</span><span class="p">(</span><span class="s2">"my_data"</span><span class="p">,</span> <span class="n">df</span><span class="p">)</span>
+
+<span class="c1"># Give a name to the model    </span>
+<span class="n">model_name</span> <span class="o">=</span> <span class="s1">'Linear-additive RUM-MNL'</span>
+
+<span class="c1"># We create Variable objects for each of the variables in the data set that we want to use in the model</span>
+<span class="n">TT1</span>  <span class="o">=</span> <span class="n">Variable</span><span class="p">(</span><span class="s1">'TT1'</span><span class="p">)</span>
+<span class="n">TC1</span>  <span class="o">=</span> <span class="n">Variable</span><span class="p">(</span><span class="s1">'TC1'</span><span class="p">)</span>
+<span class="n">TT2</span>  <span class="o">=</span> <span class="n">Variable</span><span class="p">(</span><span class="s1">'TT2'</span><span class="p">)</span>
+<span class="n">TC2</span>  <span class="o">=</span> <span class="n">Variable</span><span class="p">(</span><span class="s1">'TC2'</span><span class="p">)</span>
+<span class="n">CHOICE</span> <span class="o">=</span> <span class="n">Variable</span><span class="p">(</span><span class="s1">'CHOICE'</span><span class="p">)</span>
+
+<span class="c1"># Define the parameters to be estimated</span>
+<span class="n">ASC1</span> <span class="o">=</span> <span class="n">Beta</span><span class="p">(</span><span class="s1">'ASC1'</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">ASC2</span> <span class="o">=</span> <span class="n">Beta</span><span class="p">(</span><span class="s1">'ASC2'</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">B_TT</span> <span class="o">=</span> <span class="n">Beta</span><span class="p">(</span><span class="s1">'B_TT'</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">B_TC</span> <span class="o">=</span> <span class="n">Beta</span><span class="p">(</span><span class="s1">'B_TC'</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">B_XX</span> <span class="o">=</span> <span class="n">Beta</span><span class="p">(</span><span class="s1">'B_XX'</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Define the utility functions</span>
+<span class="n">V1</span> <span class="o">=</span> <span class="n">ASC1</span> <span class="o">+</span> <span class="n">B_TT</span> <span class="o">*</span> <span class="n">TT1</span> <span class="o">+</span> <span class="n">B_TC</span> <span class="o">*</span> <span class="n">TC1</span> <span class="o">+</span> <span class="n">B_XX</span> <span class="o">*</span> <span class="n">XX1</span>
+<span class="n">V2</span> <span class="o">=</span> <span class="n">ASC2</span> <span class="o">+</span> <span class="n">B_TT</span> <span class="o">*</span> <span class="n">TT2</span> <span class="o">+</span> <span class="n">B_TC</span> <span class="o">*</span> <span class="n">TC2</span> <span class="o">+</span> <span class="n">B_XX</span> <span class="o">*</span> <span class="n">XX2</span>
+
+<span class="c1"># Create a dictionary to list the utility functions with the numbering of alternatives</span>
+<span class="n">V</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="n">V1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="n">V2</span><span class="p">}</span>
+    
+<span class="c1"># Create a dictionary called av to describe the availability conditions of each alternative, where 1 indicates that the alternative is available, and 0 indicates that the alternative is not available.</span>
+<span class="n">AV</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span> 
+
+<span class="c1"># Estimate the model</span>
+<span class="n">results_mnl</span> <span class="o">=</span> <span class="n">estimate_mnl</span><span class="p">(</span><span class="n">V</span><span class="p">,</span> <span class="n">AV</span><span class="p">,</span> <span class="n">CHOICE</span><span class="p">,</span> <span class="n">biodata</span><span class="p">,</span> <span class="n">model_name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[14], line 22</span>
+<span class="ansi-green-intense-fg ansi-bold">     19</span> B_XX <span style="color: rgb(98,98,98)">=</span> Beta(<span style="color: rgb(175,0,0)">'</span><span style="color: rgb(175,0,0)">B_XX</span><span style="color: rgb(175,0,0)">'</span>, <span style="color: rgb(98,98,98)">0</span>, <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>, <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>, <span style="color: rgb(98,98,98)">0</span>)
+<span class="ansi-green-intense-fg ansi-bold">     21</span> <span style="color: rgb(95,135,135)"># Define the utility functions</span>
+<span class="ansi-green-fg">---&gt; 22</span> V1 <span style="color: rgb(98,98,98)">=</span> ASC1 <span style="color: rgb(98,98,98)">+</span> B_TT <span style="color: rgb(98,98,98)">*</span> TT1 <span style="color: rgb(98,98,98)">+</span> B_TC <span style="color: rgb(98,98,98)">*</span> TC1 <span style="color: rgb(98,98,98)">+</span> B_XX <span style="color: rgb(98,98,98)">*</span> <span class="ansi-yellow-bg">XX1</span>
+<span class="ansi-green-intense-fg ansi-bold">     23</span> V2 <span style="color: rgb(98,98,98)">=</span> ASC2 <span style="color: rgb(98,98,98)">+</span> B_TT <span style="color: rgb(98,98,98)">*</span> TT2 <span style="color: rgb(98,98,98)">+</span> B_TC <span style="color: rgb(98,98,98)">*</span> TC2 <span style="color: rgb(98,98,98)">+</span> B_XX <span style="color: rgb(98,98,98)">*</span> XX2
+<span class="ansi-green-intense-fg ansi-bold">     25</span> <span style="color: rgb(95,135,135)"># Create a dictionary to list the utility functions with the numbering of alternatives</span>
+
+<span class="ansi-red-fg">NameError</span>: name 'XX1' is not defined</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=4fb3c11e">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># This error occurs because the variable 'XX1' has not been defined as a Variable object.</span>
+<span class="c1"># To fix this, we must define variable using the Variable() function, and make sure it exists in the database (otherwise we will get a KeyError).</span>
+
+<span class="c1"># Create a Biogeme database object from the pandas DataFrame </span>
+<span class="n">df</span><span class="p">[</span><span class="s1">'XX1'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'TT1'</span><span class="p">]</span> <span class="o">*</span> <span class="mf">0.5</span>  <span class="c1"># Example definition of XX1  &lt;-- FIXED ensuring the variable XX1 exists in the data</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">'XX2'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'TT2'</span><span class="p">]</span> <span class="o">*</span> <span class="mf">0.5</span>  <span class="c1"># Example definition of XX2  &lt;-- FIXED ensuring the variable XX2 exists in the data</span>
+<span class="n">biodata</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Database</span><span class="p">(</span><span class="s2">"my_data"</span><span class="p">,</span> <span class="n">df</span><span class="p">)</span>
+
+<span class="c1"># Give a name to the model    </span>
+<span class="n">model_name</span> <span class="o">=</span> <span class="s1">'Linear-additive RUM-MNL'</span>
+
+<span class="c1"># We create Variable objects for each of the variables in the data set that we want to use in the model</span>
+<span class="n">TT1</span>  <span class="o">=</span> <span class="n">Variable</span><span class="p">(</span><span class="s1">'TT1'</span><span class="p">)</span>
+<span class="n">TC1</span>  <span class="o">=</span> <span class="n">Variable</span><span class="p">(</span><span class="s1">'TC1'</span><span class="p">)</span>
+<span class="n">TT2</span>  <span class="o">=</span> <span class="n">Variable</span><span class="p">(</span><span class="s1">'TT2'</span><span class="p">)</span>
+<span class="n">TC2</span>  <span class="o">=</span> <span class="n">Variable</span><span class="p">(</span><span class="s1">'TC2'</span><span class="p">)</span>
+<span class="n">CHOICE</span> <span class="o">=</span> <span class="n">Variable</span><span class="p">(</span><span class="s1">'CHOICE'</span><span class="p">)</span>
+<span class="n">XX1</span> <span class="o">=</span> <span class="n">Variable</span><span class="p">(</span><span class="s1">'XX1'</span><span class="p">)</span> <span class="c1"># &lt;-- FIXED by defining the variable XX1</span>
+<span class="n">XX2</span> <span class="o">=</span> <span class="n">Variable</span><span class="p">(</span><span class="s1">'XX2'</span><span class="p">)</span> <span class="c1"># &lt;-- FIXED by defining the variable XX2</span>
+
+<span class="c1"># Define the parameters to be estimated</span>
+<span class="n">ASC1</span> <span class="o">=</span> <span class="n">Beta</span><span class="p">(</span><span class="s1">'ASC1'</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">ASC2</span> <span class="o">=</span> <span class="n">Beta</span><span class="p">(</span><span class="s1">'ASC2'</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">B_TT</span> <span class="o">=</span> <span class="n">Beta</span><span class="p">(</span><span class="s1">'B_TT'</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">B_TC</span> <span class="o">=</span> <span class="n">Beta</span><span class="p">(</span><span class="s1">'B_TC'</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">B_XX</span> <span class="o">=</span> <span class="n">Beta</span><span class="p">(</span><span class="s1">'B_XX'</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Define the utility functions</span>
+<span class="n">V1</span> <span class="o">=</span> <span class="n">ASC1</span> <span class="o">+</span> <span class="n">B_TT</span> <span class="o">*</span> <span class="n">TT1</span> <span class="o">+</span> <span class="n">B_TC</span> <span class="o">*</span> <span class="n">TC1</span> <span class="o">+</span> <span class="n">B_XX</span> <span class="o">*</span> <span class="n">XX1</span>
+<span class="n">V2</span> <span class="o">=</span> <span class="n">ASC2</span> <span class="o">+</span> <span class="n">B_TT</span> <span class="o">*</span> <span class="n">TT2</span> <span class="o">+</span> <span class="n">B_TC</span> <span class="o">*</span> <span class="n">TC2</span> <span class="o">+</span> <span class="n">B_XX</span> <span class="o">*</span> <span class="n">XX2</span>
+
+<span class="c1"># Create a dictionary to list the utility functions with the numbering of alternatives</span>
+<span class="n">V</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="n">V1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="n">V2</span><span class="p">}</span>
+    
+<span class="c1"># Create a dictionary called av to describe the availability conditions of each alternative, where 1 indicates that the alternative is available, and 0 indicates that the alternative is not available.</span>
+<span class="n">AV</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span> 
+
+<span class="c1"># Estimate the model</span>
+<span class="n">results_mnl</span> <span class="o">=</span> <span class="n">estimate_mnl</span><span class="p">(</span><span class="n">V</span><span class="p">,</span> <span class="n">AV</span><span class="p">,</span> <span class="n">CHOICE</span><span class="p">,</span> <span class="n">biodata</span><span class="p">,</span> <span class="n">model_name</span><span class="p">)</span>
+
+<span class="c1"># And print the results</span>
+<span class="n">print_results</span><span class="p">(</span><span class="n">results_mnl</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>
+
+Results for model Linear-additive RUM-MNL
+Nbr of parameters:		4
+Sample size:			1000
+Excluded data:			0
+Null log likelihood:		-693.1472
+Final log likelihood:		-516.5406
+Likelihood ratio test (null):		353.2132
+Rho square (null):			0.255
+Rho bar square (null):			0.249
+Akaike Information Criterion:	1041.081
+Bayesian Information Criterion:	1060.712
+
+       Value  Rob. Std err  Rob. t-test  Rob. p-value
+ASC2  1.0996        0.2564         4.29           0.0
+B_TC -0.3814        0.0584        -6.53           0.0
+B_TT -0.0660        0.0110        -5.99           0.0
+B_XX -0.0330        0.0055        -5.99           0.0
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=87c174ef">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -8414,7 +8580,7 @@ B_TT -0.0825        0.0138        -5.99           0.0
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># The biogeme.database.Database.panel() method informs Biogeme that biodata is panel data, where 'RESP' is the variable in the data that identifies the individuals</span>
@@ -8438,7 +8604,7 @@ B_TT -0.0825        0.0138        -5.99           0.0
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">BiogemeError</span>                              Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[14], line 6</span>
+Cell <span class="ansi-green-fg">In[17], line 6</span>
 <span class="ansi-green-intense-fg ansi-bold">      3</span> biodata<span style="color: rgb(98,98,98)">.</span>panel(<span style="color: rgb(175,0,0)">'</span><span style="color: rgb(175,0,0)">RESP</span><span style="color: rgb(175,0,0)">'</span>)
 <span class="ansi-green-intense-fg ansi-bold">      5</span> <span style="color: rgb(95,135,135)"># But, when we estimate a simple MNL model (which ignores the panel) is thrown an error.</span>
 <span class="ansi-green-fg">----&gt; 6</span> results_mnl <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">estimate_mnl</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">V</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">AV</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">CHOICE</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">biodata</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">model_name</span><span class="ansi-yellow-bg">)</span>
@@ -8470,7 +8636,7 @@ File <span class="ansi-green-fg">~/.pyenv/versions/SEN122A_2025/lib/python3.12/s
 <span class="ansi-green-intense-fg ansi-bold">    235</span> <span style="color: rgb(175,0,0)">sample.</span>
 <span class="ansi-green-intense-fg ansi-bold">    236</span> <span style="color: rgb(175,0,0)">"""</span>
 
-<span class="ansi-red-fg">BiogemeError</span>: Error in the loglikelihood function. Some variables are not inside PanelLikelihoodTrajectory: {'TT1', 'CHOICE', 'TT2', 'TC2', 'TC1'} .If the database is organized as panel data, all variables must be used inside a PanelLikelihoodTrajectory. If it is not consistent with your model, generate a flat version of the data using the function `generateFlatPanelDataframe`.</pre>
+<span class="ansi-red-fg">BiogemeError</span>: Error in the loglikelihood function. Some variables are not inside PanelLikelihoodTrajectory: {'XX1', 'TC1', 'CHOICE', 'TT2', 'XX2', 'TC2', 'TT1'} .If the database is organized as panel data, all variables must be used inside a PanelLikelihoodTrajectory. If it is not consistent with your model, generate a flat version of the data using the function `generateFlatPanelDataframe`.</pre>
 </div>
 </div>
 </div>
@@ -8480,7 +8646,7 @@ File <span class="ansi-green-fg">~/.pyenv/versions/SEN122A_2025/lib/python3.12/s
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># The error occurs because biogeme expects a model that accounts for the panel structure of the data: it looks for a PanelLikelihoodTrajectory use. </span>
@@ -8514,21 +8680,22 @@ File <span class="ansi-green-fg">~/.pyenv/versions/SEN122A_2025/lib/python3.12/s
 
 
 Results for model Linear-additive RUM-MNL
-Nbr of parameters:		3
+Nbr of parameters:		4
 Sample size:			1000
 Excluded data:			0
 Null log likelihood:		-693.1472
 Final log likelihood:		-516.5406
 Likelihood ratio test (null):		353.2132
 Rho square (null):			0.255
-Rho bar square (null):			0.25
-Akaike Information Criterion:	1039.081
-Bayesian Information Criterion:	1053.804
+Rho bar square (null):			0.249
+Akaike Information Criterion:	1041.081
+Bayesian Information Criterion:	1060.712
 
        Value  Rob. Std err  Rob. t-test  Rob. p-value
 ASC2  1.0996        0.2564         4.29           0.0
 B_TC -0.3814        0.0584        -6.53           0.0
-B_TT -0.0825        0.0138        -5.99           0.0
+B_TT -0.0660        0.0110        -5.99           0.0
+B_XX -0.0330        0.0055        -5.99           0.0
 </pre>
 </div>
 </div>
@@ -8551,7 +8718,7 @@ B_TT -0.0825        0.0138        -5.99           0.0
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Give a name to the model    </span>
@@ -8600,7 +8767,7 @@ B_TT -0.0825        0.0138        -5.99           0.0
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">BiogemeError</span>                              Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[16], line 24</span>
+Cell <span class="ansi-green-fg">In[19], line 24</span>
 <span class="ansi-green-intense-fg ansi-bold">     21</span> <span style="color: rgb(95,135,135)"># Create a dictionary called AV to describe the availability conditions of each alternative, where 1 indicates that the alternative is available, and 0 indicates that the alternative is not available.</span>
 <span class="ansi-green-intense-fg ansi-bold">     22</span> AV <span style="color: rgb(98,98,98)">=</span> {<span style="color: rgb(98,98,98)">1</span>: <span style="color: rgb(98,98,98)">1</span>, <span style="color: rgb(98,98,98)">2</span>: <span style="color: rgb(98,98,98)">1</span>} 
 <span class="ansi-green-fg">---&gt; 24</span> results_mxl <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">estimate_mxl</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">V</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">AV</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">CHOICE</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">biodata</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">model_name</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">num_draws</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">2000</span><span class="ansi-yellow-bg">)</span>
@@ -8639,7 +8806,7 @@ File <span class="ansi-green-fg">~/.pyenv/versions/SEN122A_2025/lib/python3.12/s
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># This error occurs because the random parameter B_TC_rnd is defined but not used in the utility functions.</span>
@@ -8690,24 +8857,24 @@ File <span class="ansi-green-fg">~/.pyenv/versions/SEN122A_2025/lib/python3.12/s
 Number of estimated parameters:	4
 Sample size:	1000
 Excluded observations:	0
-Init log likelihood:	-693.109
-Final log likelihood:	-515.2759
-Likelihood ratio test for the init. model:	355.6663
+Init log likelihood:	-693.1434
+Final log likelihood:	-515.2587
+Likelihood ratio test for the init. model:	355.7692
 Rho-square for the init. model:	0.257
 Rho-square-bar for the init. model:	0.251
-Akaike Information Criterion:	1038.552
-Bayesian Information Criterion:	1058.183
-Final gradient norm:	2.5016E-03
+Akaike Information Criterion:	1038.517
+Bayesian Information Criterion:	1058.148
+Final gradient norm:	1.4141E-03
 Number of draws:	2000
-Draws generation time:	0:00:01.540477
+Draws generation time:	0:00:01.555709
 Types of draws:	['B_TC_rnd: NORMAL']
 Nbr of threads:	10
 
            Value  Rob. Std err  Rob. t-test  Rob. p-value
-ASC2      0.9820        0.2909         3.38          0.00
-B_TC     -0.3457        0.0935        -3.70          0.00
-B_TT     -0.1143        0.0289        -3.95          0.00
-sigma_TC  0.7843        0.4060         1.93          0.05
+ASC2      0.9818        0.2926         3.36          0.00
+B_TC     -0.3431        0.0955        -3.59          0.00
+B_TT     -0.1153        0.0303        -3.80          0.00
+sigma_TC  0.8042        0.4297         1.87          0.06
 </pre>
 </div>
 </div>
@@ -8730,7 +8897,7 @@ sigma_TC  0.7843        0.4060         1.93          0.05
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Create a Biogeme database object from the pandas DataFrame </span>
@@ -8779,7 +8946,7 @@ sigma_TC  0.7843        0.4060         1.93          0.05
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">BiogemeError</span>                              Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[18], line 31</span>
+Cell <span class="ansi-green-fg">In[21], line 31</span>
 <span class="ansi-green-intense-fg ansi-bold">     28</span> av <span style="color: rgb(98,98,98)">=</span> {<span style="color: rgb(98,98,98)">1</span>: <span style="color: rgb(98,98,98)">1</span>, <span style="color: rgb(98,98,98)">2</span>: <span style="color: rgb(98,98,98)">1</span>} 
 <span class="ansi-green-intense-fg ansi-bold">     30</span> <span style="color: rgb(95,135,135)"># Estimate the model</span>
 <span class="ansi-green-fg">---&gt; 31</span> results_mnl <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">estimate_mnl</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">V</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">AV</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">CHOICE</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">biodata</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">model_name</span><span class="ansi-yellow-bg">)</span>
