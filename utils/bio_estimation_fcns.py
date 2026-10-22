@@ -230,72 +230,76 @@ def get_sigma_param(params, name):
             return float(params[key])
     raise KeyError(f"Parameter for '{name}' not found.")
 
-def plot_distributions(results, distr_types, xmin, xmax, xlabel=None):
+def plot_distributions(mu, sigma, dist, xmin, xmax, xlabel="Marginal utility", ax=None):
+    """Plot one normal, lognormal, or negative_lognormal distribution.
 
-    parts = list(distr_types)
-    fig, ax = plt.subplots(
-        1, len(parts),
-        figsize=(6 * len(parts), 5),
-        sharey=False
+    With Z ~ N(0, 1), the plotted taste parameter is:
+        normal:             beta = mu + abs(sigma) * Z
+        lognormal:          beta = exp(mu + abs(sigma) * Z)
+        negative_lognormal: beta = -exp(mu + abs(sigma) * Z)
+
+    For lognormal types, mu and sigma describe the underlying normal,
+    not the mean and standard deviation of beta. A signed estimated
+    scale is accepted; sigma must be nonzero. xmin and xmax only set
+    the viewing window: the density is not truncated or renormalised.
+
+    Returns (fig, ax). In a script, call plt.show() to display the plot.
+    """
+    valid_types = ("normal", "lognormal", "negative_lognormal")
+    if not isinstance(dist, str):
+        raise ValueError(f"dist must be one of {valid_types}.")
+    dist = dist.strip().lower().replace("-", "_").replace(" ", "_")
+    if dist not in valid_types:
+        raise ValueError(f"Unknown distribution {dist!r}. Choose from {valid_types}.")
+
+    try:
+        mu, sigma, xmin, xmax = map(float, (mu, sigma, xmin, xmax))
+    except (TypeError, ValueError, OverflowError) as exc:
+        raise ValueError("mu, sigma, xmin and xmax must be finite numbers.") from exc
+    if not np.all(np.isfinite([mu, sigma, xmin, xmax])):
+        raise ValueError("mu, sigma, xmin and xmax must be finite numbers.")
+    sigma = abs(sigma)
+    if sigma == 0:
+        raise ValueError("sigma must be nonzero; a fixed parameter has no continuous PDF.")
+    if xmin >= xmax:
+        raise ValueError("xmin must be smaller than xmax.")
+    if dist == "lognormal" and xmax <= 0:
+        raise ValueError("A lognormal distribution needs a range with xmax > 0.")
+    if dist == "negative_lognormal" and xmin >= 0:
+        raise ValueError("A negative lognormal distribution needs a range with xmin < 0.")
+
+    x = np.linspace(xmin, xmax, 1000)
+    if xmin < 0 < xmax:
+        x = np.sort(np.append(x, 0.0))
+
+    if dist == "normal":
+        mean = mu
+        pdf = np.exp(-0.5 * ((x - mu) / sigma) ** 2) / sigma / np.sqrt(2 * np.pi)
+    else:
+        sign = -1 if dist == "negative_lognormal" else 1
+        mean = sign * np.exp(mu + 0.5 * sigma ** 2)
+        pdf = np.zeros_like(x)
+        on_support = sign * x > 0
+        magnitude = sign * x[on_support]
+        # Evaluate logs only on the support; the PDF is zero elsewhere,
+        # including at x = 0. Log space avoids multiplying small factors.
+        log_pdf = (
+            -0.5 * ((np.log(magnitude) - mu) / sigma) ** 2
+            - np.log(magnitude) - np.log(sigma) - 0.5 * np.log(2 * np.pi)
+        )
+        pdf[on_support] = np.exp(log_pdf)
+
+    if ax is None:
+        fig, ax = plt.subplots(figsize=(6, 5))
+    else:
+        fig = ax.figure
+    ax.plot(x, pdf)
+    if xmin <= 0 <= xmax:
+        ax.axvline(0, ls="--", c="black", lw=1)
+    ax.set(
+        xlim=(xmin, xmax), ylim=(0, None),
+        xlabel="Marginal utility" if xlabel is None else xlabel, ylabel="PDF",
+        title=f"{dist.replace('_', ' ')}\nmean = {mean:.3g}",
     )
-    if len(parts) == 1:
-        ax = [ax]
-
-    x = np.linspace(xmin, xmax, 500)
-    if any(v['dist'] == 'lognormal' for v in distr_types.values()):
-        x = x[x != 0]  # lognormal is not defined at 0
-
-    params = results.get_beta_values()
-    
-    for i, part in enumerate(parts):
-        mu = get_beta_param(params, f'{part}')
-        sigma = abs(get_sigma_param(params, f'{part}'))
-
-        spec   = distr_types[part]
-        d_type = spec['dist']
-        sign   = spec.get('sign', 1)              # default +1
-
-        # ------------------------------------------------------------------
-        # pick the pdf and mean formula for the requested distribution
-        # ------------------------------------------------------------------
-        if d_type == 'normal':
-            mean = mu
-            pdf  = (1 / (sigma * np.sqrt(2*np.pi))
-                   ) * np.exp(-((x - mu) ** 2) / (2 * sigma ** 2))
-
-        elif d_type == 'lognormal':
-            raw_mean = np.exp(mu + 0.5 * sigma ** 2)   # > 0 by definition
-            mean     = sign * raw_mean
-
-            # Base pdf lives on the positive real line
-            x_pos    = np.abs(x)
-            base_pdf = (1 / (x_pos * sigma * np.sqrt(2*np.pi))
-                       ) * np.exp(-((np.log(x_pos) - mu) ** 2) / (2 * sigma ** 2))
-
-            # Flip to the requested side of the axis
-            if sign < 0:
-                pdf = np.where(x < 0, base_pdf, 0)
-            else:
-                pdf = np.where(x > 0, base_pdf, 0)
-
-        else:
-            raise ValueError(f"Unknown distribution type: {d_type}")
-
-        # ------------------------------------------------------------------
-        # draw
-        # ------------------------------------------------------------------
-        ax[i].plot(x, pdf, label=d_type)
-        ax[i].axvline(0, ls='--', c='k')
-        ax[i].axhline(0, ls='-', c='k')
-
-        ax[i].set_title(f'{part}: {d_type}\nmean = {mean:.3g}')
-        if xlabel is not None:
-            ax[i].set_xlabel(xlabel)
-        else:
-            ax[i].set_xlabel('Marginal utility')
-        if i == 0:
-            ax[i].set_ylabel('PDF')
-        ax[i].legend()
-
-    plt.tight_layout()
-    plt.show()
+    fig.tight_layout()
+    return fig, ax
