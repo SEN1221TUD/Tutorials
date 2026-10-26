@@ -7511,6 +7511,7 @@ This tutorial comprises the following sections:</p>
 <li><code>NameError:</code></li>
 <li><code>BiogemeError: Error in the loglikelihood function.</code></li>
 <li><code>BiogemeError: The argument of MonteCarlo must contain a bioDraws.</code></li>
+<li><code>BiogemeError: Invalid expression during multiplication to Beta:</code></li>
 <li><code>BiogemeError: The following elementary expressions are defined more than once.</code></li>
 </ol>
 </li>
@@ -7523,7 +7524,7 @@ This tutorial comprises the following sections:</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Let's first import some native Python libraries</span>
@@ -7531,6 +7532,18 @@ This tutorial comprises the following sections:</p>
 <span class="kn">import</span> <span class="nn">os</span>
 </pre></div>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6b71b5e7">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<hr/>
+<hr/>
 </div>
 </div>
 </div>
@@ -7557,12 +7570,12 @@ This tutorial comprises the following sections:</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=bd2ff368">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=bd2ff368">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># We try to import a module from the utils folder</span>
@@ -7576,32 +7589,12 @@ This tutorial comprises the following sections:</p>
 </div>
 </div>
 </div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[2], line 6</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> sys<span style="color: rgb(98,98,98)">.</span>path<span style="color: rgb(98,98,98)">.</span>append(os<span style="color: rgb(98,98,98)">.</span>path<span style="color: rgb(98,98,98)">.</span>abspath(os<span style="color: rgb(98,98,98)">.</span>path<span style="color: rgb(98,98,98)">.</span>join(os<span style="color: rgb(98,98,98)">.</span>getcwd(), <span style="color: rgb(175,0,0)">'</span><span style="color: rgb(175,0,0)">..</span><span style="color: rgb(175,0,0)">'</span>, <span style="color: rgb(175,0,0)">'</span><span style="color: rgb(175,0,0)">..</span><span style="color: rgb(175,0,0)">'</span>)))
-<span class="ansi-green-intense-fg ansi-bold">      5</span> <span style="color: rgb(95,135,135)"># Import the bio_estimation_fcns from the utils folder</span>
-<span class="ansi-green-fg">----&gt; 6</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span><span style="color: rgb(188,188,188)"> </span><span class="ansi-bold" style="color: rgb(0,0,255)">utils</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">bio_estimation_fcns</span><span style="color: rgb(188,188,188)"> </span><span class="ansi-bold" style="color: rgb(0,135,0)">import</span> print_results
-
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named 'utils'</pre>
-</div>
-</div>
-</div>
-</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=72cc899b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># This error occurs because the folder utils is not found in the specified path.</span>
@@ -7647,6 +7640,7 @@ The correct path to look for the 'utils' folder should be:
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<hr/>
 <br/>
 <p><code>ERROR: Could not find a version that satisfies the requirement</code></p>
 </div>
@@ -7657,7 +7651,7 @@ The correct path to look for the 'utils' folder should be:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">whatever</span><span class="o">-</span><span class="n">package</span>
@@ -7674,7 +7668,10 @@ The correct path to look for the 'utils' folder should be:
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre><span class="ansi-red-fg">ERROR: Could not find a version that satisfies the requirement whatever-package (from versions: none)</span><span class="ansi-red-fg">
-</span><span class="ansi-red-fg">ERROR: No matching distribution found for whatever-package</span><span class="ansi-red-fg">
+</span>
+<span class="ansi-bold">[</span><span class="ansi-blue-fg">notice</span><span class="ansi-bold">]</span> A new release of pip is available: <span class="ansi-red-fg">25.3</span> -&gt; <span class="ansi-green-fg">26.2.2</span>
+<span class="ansi-bold">[</span><span class="ansi-blue-fg">notice</span><span class="ansi-bold">]</span> To update, run: <span class="ansi-green-fg">pip install --upgrade pip</span>
+<span class="ansi-red-fg">ERROR: No matching distribution found for whatever-package</span><span class="ansi-red-fg">
 </span>Note: you may need to restart the kernel to use updated packages.
 </pre>
 </div>
@@ -7686,7 +7683,7 @@ The correct path to look for the 'utils' folder should be:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># This error occurs because the Python interpreter cannot find the specified package in its search path.</span>
@@ -7700,13 +7697,25 @@ The correct path to look for the 'utils' folder should be:
 </div>
 </div>
 </div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c30a3b77">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<hr/>
+<hr/>
+</div>
+</div>
+</div>
+</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=76c9f509">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="1.-Pandas-errors">1. Pandas errors<a class="anchor-link" href="#1.-Pandas-errors">¶</a></h2>
+<h2 id="2.-Pandas-errors">2. Pandas errors<a class="anchor-link" href="#2.-Pandas-errors">¶</a></h2>
 </div>
 </div>
 </div>
@@ -7715,7 +7724,7 @@ The correct path to look for the 'utils' folder should be:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Import pandas</span>
@@ -7733,6 +7742,7 @@ The correct path to look for the 'utils' folder should be:
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<hr/>
 <br/>
 <p><code>FileNotFoundError: [Errno 2] No such file or directory:</code></p>
 </div>
@@ -7743,7 +7753,7 @@ The correct path to look for the 'utils' folder should be:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Load the choice data</span>
@@ -7768,7 +7778,7 @@ The correct path to look for the 'utils' folder should be:
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">FileNotFoundError</span>                         Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[7], line 7</span>
+Cell <span class="ansi-green-fg">In[13], line 7</span>
 <span class="ansi-green-intense-fg ansi-bold">      4</span> data_path <span style="color: rgb(98,98,98)">=</span>  Path(<span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">'</span><span style="color: rgb(175,0,0)">synthetic_VTTdata_tutorial1.dat</span><span style="color: rgb(175,0,0)">'</span>)
 <span class="ansi-green-intense-fg ansi-bold">      6</span> <span style="color: rgb(95,135,135)"># Then we load the data into a pandas DataFrame</span>
 <span class="ansi-green-fg">----&gt; 7</span> df <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">pd</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">read_csv</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">data_path</span><span class="ansi-yellow-bg">)</span>
@@ -7838,7 +7848,7 @@ File <span class="ansi-green-fg">~/.pyenv/versions/SEN122A_2025/lib/python3.12/s
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># This error occurs when we try to load the data, but the file does not exist in the specified path.</span>
@@ -7876,7 +7886,7 @@ The specified path is relative to the current working directory:
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -7958,6 +7968,18 @@ The specified path is relative to the current working directory:
 </div>
 </div>
 </div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=622ac323">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<hr/>
+<hr/>
+</div>
+</div>
+</div>
+</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d4fa41e3">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -7973,7 +7995,7 @@ The specified path is relative to the current working directory:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Import biogeme libraries</span>
@@ -7991,6 +8013,7 @@ The specified path is relative to the current working directory:
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<hr/>
 <br/>
 <p><code>AttributeError: 'DataFrame' object has no attribute 'data'</code></p>
 </div>
@@ -8001,7 +8024,7 @@ The specified path is relative to the current working directory:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Give a name to the model    </span>
@@ -8047,7 +8070,7 @@ The specified path is relative to the current working directory:
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">AttributeError</span>                            Traceback (most recent call last)
-<span class="ansi-green-fg">/var/folders/gm/c7whqvgd2h177ltnp_7z9pv5yjhzk2/T/ipykernel_29952/3420160964.py</span> in <span class="ansi-cyan-fg">?</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">/var/folders/gm/c7whqvgd2h177ltnp_7z9pv5yjhzk2/T/ipykernel_51696/3420160964.py</span> in <span class="ansi-cyan-fg">?</span><span class="ansi-blue-fg">()</span>
 <span class="ansi-green-intense-fg ansi-bold">     24</span> <span class="ansi-red-fg"># Create a dictionary called AV to describe the availability conditions of each alternative, where 1 indicates that the alternative is available, and 0 indicates that the alternative is not available.</span>
 <span class="ansi-green-intense-fg ansi-bold">     25</span> AV <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">{</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">:</span> <span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">:</span> <span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">}</span>
 <span class="ansi-green-intense-fg ansi-bold">     26</span> 
@@ -8055,14 +8078,14 @@ The specified path is relative to the current working directory:
 <span class="ansi-green-fg">---&gt; 28</span><span class="ansi-red-fg"> </span>results_mnl <span class="ansi-blue-fg">=</span> estimate_mnl<span class="ansi-blue-fg">(</span>V<span class="ansi-blue-fg">,</span> AV<span class="ansi-blue-fg">,</span> CHOICE<span class="ansi-blue-fg">,</span> df<span class="ansi-blue-fg">,</span> model_name<span class="ansi-blue-fg">)</span>
 
 <span class="ansi-green-fg">~/Documents/Repos_and_data/SEN1221/tutorials/utils/bio_estimation_fcns.py</span> in <span class="ansi-cyan-fg">?</span><span class="ansi-blue-fg">(V, AV, CHOICE, database, model_name)</span>
-<span class="ansi-green-intense-fg ansi-bold">     16</span>     <span class="ansi-red-fg"># Define the log-likelihood by taking the log of the choice probabilities of the chosen alternative</span>
-<span class="ansi-green-intense-fg ansi-bold">     17</span>     LL <span class="ansi-blue-fg">=</span> log<span class="ansi-blue-fg">(</span>prob<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     18</span> 
-<span class="ansi-green-intense-fg ansi-bold">     19</span>     <span class="ansi-red-fg"># Create the Biogeme object containing the object database and the formula for the contribution to the log-likelihood of each row using the following syntax:</span>
-<span class="ansi-green-fg">---&gt; 20</span><span class="ansi-red-fg">     </span>biogeme <span class="ansi-blue-fg">=</span> bio<span class="ansi-blue-fg">.</span>BIOGEME<span class="ansi-blue-fg">(</span>database<span class="ansi-blue-fg">,</span> LL<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     21</span> 
-<span class="ansi-green-intense-fg ansi-bold">     22</span>     <span class="ansi-red-fg"># The following syntax passes the name of the model:</span>
-<span class="ansi-green-intense-fg ansi-bold">     23</span>     biogeme<span class="ansi-blue-fg">.</span>modelName <span class="ansi-blue-fg">=</span> model_name
+<span class="ansi-green-intense-fg ansi-bold">     17</span>     <span class="ansi-red-fg"># Define the log-likelihood by taking the log of the choice probabilities of the chosen alternative</span>
+<span class="ansi-green-intense-fg ansi-bold">     18</span>     LL <span class="ansi-blue-fg">=</span> log<span class="ansi-blue-fg">(</span>prob<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     19</span> 
+<span class="ansi-green-intense-fg ansi-bold">     20</span>     <span class="ansi-red-fg"># Create the Biogeme object containing the object database and the formula for the contribution to the log-likelihood of each row using the following syntax:</span>
+<span class="ansi-green-fg">---&gt; 21</span><span class="ansi-red-fg">     </span>biogeme <span class="ansi-blue-fg">=</span> bio<span class="ansi-blue-fg">.</span>BIOGEME<span class="ansi-blue-fg">(</span>database<span class="ansi-blue-fg">,</span> LL<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     22</span> 
+<span class="ansi-green-intense-fg ansi-bold">     23</span>     <span class="ansi-red-fg"># The following syntax passes the name of the model:</span>
+<span class="ansi-green-intense-fg ansi-bold">     24</span>     biogeme<span class="ansi-blue-fg">.</span>modelName <span class="ansi-blue-fg">=</span> model_name
 
 <span class="ansi-green-fg">~/.pyenv/versions/SEN122A_2025/lib/python3.12/site-packages/biogeme/deprecated.py</span> in <span class="ansi-cyan-fg">?</span><span class="ansi-blue-fg">(*args, **kwargs)</span>
 <span class="ansi-green-intense-fg ansi-bold">     73</span>                         <span class="ansi-blue-fg">)</span>
@@ -8098,7 +8121,7 @@ The specified path is relative to the current working directory:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># The error occurs because the function biogeme, which is invoked in estimate_mnl() expects a Biogeme database object. </span>
@@ -8130,18 +8153,19 @@ The specified path is relative to the current working directory:
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>The object 'biodata' has type &lt;class 'biogeme.database.Database'&gt;
 
-
-Results for model Linear-additive RUM-MNL
-Nbr of parameters:		3
-Sample size:			1000
-Excluded data:			0
-Null log likelihood:		-693.1472
-Final log likelihood:		-516.5406
-Likelihood ratio test (null):		353.2132
-Rho square (null):			0.255
-Rho bar square (null):			0.25
-Akaike Information Criterion:	1039.081
-Bayesian Information Criterion:	1053.804
+Estimation finished
+Cause of termination           : Relative gradient = 5.2e-06 &lt;= 0.00012
+Number of iterations           :            4
+Estimation time                :      0:00:00
+Number of estimated parameters :            3
+Sample size                    :         1000
+Excluded observations          :            0
+Null log likelihood            :      -693.15
+Init log likelihood            :      -693.15
+Final log likelihood           :      -516.54
+Rho-square for the null model  :        0.255
+Bayesian Information Criterion :      1053.80
+Number of threads              :           10
 
        Value  Rob. Std err  Rob. t-test  Rob. p-value
 ASC2  1.0996        0.2564         4.29           0.0
@@ -8159,6 +8183,7 @@ B_TT -0.0825        0.0138        -5.99           0.0
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<hr/>
 <br/>
 <p><code>KeyError:</code></p>
 </div>
@@ -8169,7 +8194,7 @@ B_TT -0.0825        0.0138        -5.99           0.0
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Create a Biogeme database object from the pandas DataFrame </span>
@@ -8218,17 +8243,17 @@ B_TT -0.0825        0.0138        -5.99           0.0
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">KeyError</span>                                  Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[12], line 31</span>
+Cell <span class="ansi-green-fg">In[18], line 31</span>
 <span class="ansi-green-intense-fg ansi-bold">     28</span> AV <span style="color: rgb(98,98,98)">=</span> {<span style="color: rgb(98,98,98)">1</span>: <span style="color: rgb(98,98,98)">1</span>, <span style="color: rgb(98,98,98)">2</span>: <span style="color: rgb(98,98,98)">1</span>} 
 <span class="ansi-green-intense-fg ansi-bold">     30</span> <span style="color: rgb(95,135,135)"># Estimate the model</span>
 <span class="ansi-green-fg">---&gt; 31</span> results_mnl <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">estimate_mnl</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">V</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">AV</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">CHOICE</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">biodata</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">model_name</span><span class="ansi-yellow-bg">)</span>
 
-File <span class="ansi-green-fg">~/Documents/Repos_and_data/SEN1221/tutorials/utils/bio_estimation_fcns.py:20</span>, in <span class="ansi-cyan-fg">estimate_mnl</span><span class="ansi-blue-fg">(V, AV, CHOICE, database, model_name)</span>
-<span class="ansi-green-intense-fg ansi-bold">     17</span> LL <span style="color: rgb(98,98,98)">=</span> log(prob)
-<span class="ansi-green-intense-fg ansi-bold">     19</span> <span style="color: rgb(95,135,135)"># Create the Biogeme object containing the object database and the formula for the contribution to the log-likelihood of each row using the following syntax:</span>
-<span class="ansi-green-fg">---&gt; 20</span> biogeme <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">bio</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">BIOGEME</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">database</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">LL</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     22</span> <span style="color: rgb(95,135,135)"># The following syntax passes the name of the model:</span>
-<span class="ansi-green-intense-fg ansi-bold">     23</span> biogeme<span style="color: rgb(98,98,98)">.</span>modelName <span style="color: rgb(98,98,98)">=</span> model_name
+File <span class="ansi-green-fg">~/Documents/Repos_and_data/SEN1221/tutorials/utils/bio_estimation_fcns.py:21</span>, in <span class="ansi-cyan-fg">estimate_mnl</span><span class="ansi-blue-fg">(V, AV, CHOICE, database, model_name)</span>
+<span class="ansi-green-intense-fg ansi-bold">     18</span> LL <span style="color: rgb(98,98,98)">=</span> log(prob)
+<span class="ansi-green-intense-fg ansi-bold">     20</span> <span style="color: rgb(95,135,135)"># Create the Biogeme object containing the object database and the formula for the contribution to the log-likelihood of each row using the following syntax:</span>
+<span class="ansi-green-fg">---&gt; 21</span> biogeme <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">bio</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">BIOGEME</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">database</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">LL</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     23</span> <span style="color: rgb(95,135,135)"># The following syntax passes the name of the model:</span>
+<span class="ansi-green-intense-fg ansi-bold">     24</span> biogeme<span style="color: rgb(98,98,98)">.</span>modelName <span style="color: rgb(98,98,98)">=</span> model_name
 
 File <span class="ansi-green-fg">~/.pyenv/versions/SEN122A_2025/lib/python3.12/site-packages/biogeme/deprecated.py:77</span>, in <span class="ansi-cyan-fg">deprecated_parameters.&lt;locals&gt;.decorator.&lt;locals&gt;.wrapper</span><span class="ansi-blue-fg">(*args, **kwargs)</span>
 <span class="ansi-green-intense-fg ansi-bold">     74</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">else</span>:
@@ -8342,7 +8367,7 @@ File <span class="ansi-green-fg">~/.pyenv/versions/SEN122A_2025/lib/python3.12/s
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># This error occurs because the variable 'Chosen' does not exist in the Biogeme database object 'biodata'.</span>
@@ -8376,18 +8401,19 @@ File <span class="ansi-green-fg">~/.pyenv/versions/SEN122A_2025/lib/python3.12/s
 <pre>Column names in the DataFrame:
 Index(['RESP', 'TC1', 'TT1', 'TC2', 'TT2', 'CHOICE'], dtype='object')
 
-
-Results for model Linear-additive RUM-MNL
-Nbr of parameters:		3
-Sample size:			1000
-Excluded data:			0
-Null log likelihood:		-693.1472
-Final log likelihood:		-516.5406
-Likelihood ratio test (null):		353.2132
-Rho square (null):			0.255
-Rho bar square (null):			0.25
-Akaike Information Criterion:	1039.081
-Bayesian Information Criterion:	1053.804
+Estimation finished
+Cause of termination           : Relative gradient = 5.2e-06 &lt;= 0.00012
+Number of iterations           :            4
+Estimation time                :      0:00:00
+Number of estimated parameters :            3
+Sample size                    :         1000
+Excluded observations          :            0
+Null log likelihood            :      -693.15
+Init log likelihood            :      -693.15
+Final log likelihood           :      -516.54
+Rho-square for the null model  :        0.255
+Bayesian Information Criterion :      1053.80
+Number of threads              :           10
 
        Value  Rob. Std err  Rob. t-test  Rob. p-value
 ASC2  1.0996        0.2564         4.29           0.0
@@ -8405,6 +8431,7 @@ B_TT -0.0825        0.0138        -5.99           0.0
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<hr/>
 <br/>
 <p><code>NameError: name '&lt;var&gt;' is not defined</code></p>
 </div>
@@ -8415,7 +8442,7 @@ B_TT -0.0825        0.0138        -5.99           0.0
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Create a Biogeme database object from the pandas DataFrame </span>
@@ -8465,7 +8492,7 @@ B_TT -0.0825        0.0138        -5.99           0.0
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[14], line 22</span>
+Cell <span class="ansi-green-fg">In[20], line 22</span>
 <span class="ansi-green-intense-fg ansi-bold">     19</span> B_XX <span style="color: rgb(98,98,98)">=</span> Beta(<span style="color: rgb(175,0,0)">'</span><span style="color: rgb(175,0,0)">B_XX</span><span style="color: rgb(175,0,0)">'</span>, <span style="color: rgb(98,98,98)">0</span>, <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>, <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>, <span style="color: rgb(98,98,98)">0</span>)
 <span class="ansi-green-intense-fg ansi-bold">     21</span> <span style="color: rgb(95,135,135)"># Define the utility functions</span>
 <span class="ansi-green-fg">---&gt; 22</span> V1 <span style="color: rgb(98,98,98)">=</span> ASC1 <span style="color: rgb(98,98,98)">+</span> B_TT <span style="color: rgb(98,98,98)">*</span> TT1 <span style="color: rgb(98,98,98)">+</span> B_TC <span style="color: rgb(98,98,98)">*</span> TC1 <span style="color: rgb(98,98,98)">+</span> B_XX <span style="color: rgb(98,98,98)">*</span> <span class="ansi-yellow-bg">XX1</span>
@@ -8482,7 +8509,7 @@ Cell <span class="ansi-green-fg">In[14], line 22</span>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># This error occurs because the variable 'XX1' has not been defined as a Variable object.</span>
@@ -8540,18 +8567,19 @@ Cell <span class="ansi-green-fg">In[14], line 22</span>
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>
-
-Results for model Linear-additive RUM-MNL
-Nbr of parameters:		4
-Sample size:			1000
-Excluded data:			0
-Null log likelihood:		-693.1472
-Final log likelihood:		-516.5406
-Likelihood ratio test (null):		353.2132
-Rho square (null):			0.255
-Rho bar square (null):			0.249
-Akaike Information Criterion:	1041.081
-Bayesian Information Criterion:	1060.712
+Estimation finished
+Cause of termination           : Relative gradient = 5.2e-06 &lt;= 0.00012
+Number of iterations           :            4
+Estimation time                :      0:00:00
+Number of estimated parameters :            4
+Sample size                    :         1000
+Excluded observations          :            0
+Null log likelihood            :      -693.15
+Init log likelihood            :      -693.15
+Final log likelihood           :      -516.54
+Rho-square for the null model  :        0.255
+Bayesian Information Criterion :      1060.71
+Number of threads              :           10
 
        Value  Rob. Std err  Rob. t-test  Rob. p-value
 ASC2  1.0996        0.2564         4.29           0.0
@@ -8570,6 +8598,7 @@ B_XX -0.0330        0.0055        -5.99           0.0
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<hr/>
 <br/>
 <p><code>BiogemeError: Error in the loglikelihood function. Some variables are not inside PanelLikelihoodTrajectory:</code></p>
 </div>
@@ -8580,7 +8609,7 @@ B_XX -0.0330        0.0055        -5.99           0.0
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># The biogeme.database.Database.panel() method informs Biogeme that biodata is panel data, where 'RESP' is the variable in the data that identifies the individuals</span>
@@ -8604,17 +8633,17 @@ B_XX -0.0330        0.0055        -5.99           0.0
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">BiogemeError</span>                              Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[17], line 6</span>
+Cell <span class="ansi-green-fg">In[22], line 6</span>
 <span class="ansi-green-intense-fg ansi-bold">      3</span> biodata<span style="color: rgb(98,98,98)">.</span>panel(<span style="color: rgb(175,0,0)">'</span><span style="color: rgb(175,0,0)">RESP</span><span style="color: rgb(175,0,0)">'</span>)
 <span class="ansi-green-intense-fg ansi-bold">      5</span> <span style="color: rgb(95,135,135)"># But, when we estimate a simple MNL model (which ignores the panel) is thrown an error.</span>
 <span class="ansi-green-fg">----&gt; 6</span> results_mnl <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">estimate_mnl</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">V</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">AV</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">CHOICE</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">biodata</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">model_name</span><span class="ansi-yellow-bg">)</span>
 
-File <span class="ansi-green-fg">~/Documents/Repos_and_data/SEN1221/tutorials/utils/bio_estimation_fcns.py:20</span>, in <span class="ansi-cyan-fg">estimate_mnl</span><span class="ansi-blue-fg">(V, AV, CHOICE, database, model_name)</span>
-<span class="ansi-green-intense-fg ansi-bold">     17</span> LL <span style="color: rgb(98,98,98)">=</span> log(prob)
-<span class="ansi-green-intense-fg ansi-bold">     19</span> <span style="color: rgb(95,135,135)"># Create the Biogeme object containing the object database and the formula for the contribution to the log-likelihood of each row using the following syntax:</span>
-<span class="ansi-green-fg">---&gt; 20</span> biogeme <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">bio</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">BIOGEME</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">database</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">LL</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     22</span> <span style="color: rgb(95,135,135)"># The following syntax passes the name of the model:</span>
-<span class="ansi-green-intense-fg ansi-bold">     23</span> biogeme<span style="color: rgb(98,98,98)">.</span>modelName <span style="color: rgb(98,98,98)">=</span> model_name
+File <span class="ansi-green-fg">~/Documents/Repos_and_data/SEN1221/tutorials/utils/bio_estimation_fcns.py:21</span>, in <span class="ansi-cyan-fg">estimate_mnl</span><span class="ansi-blue-fg">(V, AV, CHOICE, database, model_name)</span>
+<span class="ansi-green-intense-fg ansi-bold">     18</span> LL <span style="color: rgb(98,98,98)">=</span> log(prob)
+<span class="ansi-green-intense-fg ansi-bold">     20</span> <span style="color: rgb(95,135,135)"># Create the Biogeme object containing the object database and the formula for the contribution to the log-likelihood of each row using the following syntax:</span>
+<span class="ansi-green-fg">---&gt; 21</span> biogeme <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">bio</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">BIOGEME</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">database</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">LL</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     23</span> <span style="color: rgb(95,135,135)"># The following syntax passes the name of the model:</span>
+<span class="ansi-green-intense-fg ansi-bold">     24</span> biogeme<span style="color: rgb(98,98,98)">.</span>modelName <span style="color: rgb(98,98,98)">=</span> model_name
 
 File <span class="ansi-green-fg">~/.pyenv/versions/SEN122A_2025/lib/python3.12/site-packages/biogeme/deprecated.py:77</span>, in <span class="ansi-cyan-fg">deprecated_parameters.&lt;locals&gt;.decorator.&lt;locals&gt;.wrapper</span><span class="ansi-blue-fg">(*args, **kwargs)</span>
 <span class="ansi-green-intense-fg ansi-bold">     74</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">else</span>:
@@ -8636,7 +8665,7 @@ File <span class="ansi-green-fg">~/.pyenv/versions/SEN122A_2025/lib/python3.12/s
 <span class="ansi-green-intense-fg ansi-bold">    235</span> <span style="color: rgb(175,0,0)">sample.</span>
 <span class="ansi-green-intense-fg ansi-bold">    236</span> <span style="color: rgb(175,0,0)">"""</span>
 
-<span class="ansi-red-fg">BiogemeError</span>: Error in the loglikelihood function. Some variables are not inside PanelLikelihoodTrajectory: {'XX1', 'TC1', 'CHOICE', 'TT2', 'XX2', 'TC2', 'TT1'} .If the database is organized as panel data, all variables must be used inside a PanelLikelihoodTrajectory. If it is not consistent with your model, generate a flat version of the data using the function `generateFlatPanelDataframe`.</pre>
+<span class="ansi-red-fg">BiogemeError</span>: Error in the loglikelihood function. Some variables are not inside PanelLikelihoodTrajectory: {'TT1', 'TT2', 'XX1', 'CHOICE', 'TC2', 'XX2', 'TC1'} .If the database is organized as panel data, all variables must be used inside a PanelLikelihoodTrajectory. If it is not consistent with your model, generate a flat version of the data using the function `generateFlatPanelDataframe`.</pre>
 </div>
 </div>
 </div>
@@ -8646,7 +8675,7 @@ File <span class="ansi-green-fg">~/.pyenv/versions/SEN122A_2025/lib/python3.12/s
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># The error occurs because biogeme expects a model that accounts for the panel structure of the data: it looks for a PanelLikelihoodTrajectory use. </span>
@@ -8678,18 +8707,19 @@ File <span class="ansi-green-fg">~/.pyenv/versions/SEN122A_2025/lib/python3.12/s
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>False
 
-
-Results for model Linear-additive RUM-MNL
-Nbr of parameters:		4
-Sample size:			1000
-Excluded data:			0
-Null log likelihood:		-693.1472
-Final log likelihood:		-516.5406
-Likelihood ratio test (null):		353.2132
-Rho square (null):			0.255
-Rho bar square (null):			0.249
-Akaike Information Criterion:	1041.081
-Bayesian Information Criterion:	1060.712
+Estimation finished
+Cause of termination           : Relative gradient = 6.9e-06 &lt;= 0.00012
+Number of iterations           :            0
+Estimation time                :      0:00:00
+Number of estimated parameters :            4
+Sample size                    :         1000
+Excluded observations          :            0
+Null log likelihood            :      -693.15
+Init log likelihood            :      -516.54
+Final log likelihood           :      -516.54
+Rho-square for the null model  :        0.255
+Bayesian Information Criterion :      1060.71
+Number of threads              :           10
 
        Value  Rob. Std err  Rob. t-test  Rob. p-value
 ASC2  1.0996        0.2564         4.29           0.0
@@ -8708,6 +8738,7 @@ B_XX -0.0330        0.0055        -5.99           0.0
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<hr/>
 <br/>
 <p><code>BiogemeError: The argument of MonteCarlo must contain a bioDraws:</code></p>
 </div>
@@ -8718,7 +8749,7 @@ B_XX -0.0330        0.0055        -5.99           0.0
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Give a name to the model    </span>
@@ -8767,17 +8798,17 @@ B_XX -0.0330        0.0055        -5.99           0.0
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">BiogemeError</span>                              Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[19], line 24</span>
+Cell <span class="ansi-green-fg">In[24], line 24</span>
 <span class="ansi-green-intense-fg ansi-bold">     21</span> <span style="color: rgb(95,135,135)"># Create a dictionary called AV to describe the availability conditions of each alternative, where 1 indicates that the alternative is available, and 0 indicates that the alternative is not available.</span>
 <span class="ansi-green-intense-fg ansi-bold">     22</span> AV <span style="color: rgb(98,98,98)">=</span> {<span style="color: rgb(98,98,98)">1</span>: <span style="color: rgb(98,98,98)">1</span>, <span style="color: rgb(98,98,98)">2</span>: <span style="color: rgb(98,98,98)">1</span>} 
 <span class="ansi-green-fg">---&gt; 24</span> results_mxl <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">estimate_mxl</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">V</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">AV</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">CHOICE</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">biodata</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">model_name</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">num_draws</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">2000</span><span class="ansi-yellow-bg">)</span>
 
-File <span class="ansi-green-fg">~/Documents/Repos_and_data/SEN1221/tutorials/utils/bio_estimation_fcns.py:82</span>, in <span class="ansi-cyan-fg">estimate_mxl</span><span class="ansi-blue-fg">(V, AV, CHOICE, biodata, model_name, num_draws)</span>
-<span class="ansi-green-intense-fg ansi-bold">     79</span> LL <span style="color: rgb(98,98,98)">=</span> log(uncondProb)
-<span class="ansi-green-intense-fg ansi-bold">     81</span> <span style="color: rgb(95,135,135)"># Create the Biogeme estimation object containing the data and the model</span>
-<span class="ansi-green-fg">---&gt; 82</span> biogeme <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">bio</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">BIOGEME</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">biodata</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">LL</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">number_of_draws</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">num_draws</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     84</span> <span style="color: rgb(95,135,135)"># Set reporting levels</span>
-<span class="ansi-green-intense-fg ansi-bold">     85</span> biogeme<span style="color: rgb(98,98,98)">.</span>generate_pickle <span style="color: rgb(98,98,98)">=</span> <span class="ansi-bold" style="color: rgb(0,135,0)">False</span>
+File <span class="ansi-green-fg">~/Documents/Repos_and_data/SEN1221/tutorials/utils/bio_estimation_fcns.py:83</span>, in <span class="ansi-cyan-fg">estimate_mxl</span><span class="ansi-blue-fg">(V, AV, CHOICE, biodata, model_name, num_draws)</span>
+<span class="ansi-green-intense-fg ansi-bold">     80</span> LL <span style="color: rgb(98,98,98)">=</span> log(uncondProb)
+<span class="ansi-green-intense-fg ansi-bold">     82</span> <span style="color: rgb(95,135,135)"># Create the Biogeme estimation object containing the data and the model</span>
+<span class="ansi-green-fg">---&gt; 83</span> biogeme <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">bio</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">BIOGEME</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">biodata</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">LL</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">number_of_draws</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">num_draws</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     85</span> <span style="color: rgb(95,135,135)"># Set reporting levels</span>
+<span class="ansi-green-intense-fg ansi-bold">     86</span> biogeme<span style="color: rgb(98,98,98)">.</span>generate_pickle <span style="color: rgb(98,98,98)">=</span> <span class="ansi-bold" style="color: rgb(0,135,0)">False</span>
 
 File <span class="ansi-green-fg">~/.pyenv/versions/SEN122A_2025/lib/python3.12/site-packages/biogeme/deprecated.py:77</span>, in <span class="ansi-cyan-fg">deprecated_parameters.&lt;locals&gt;.decorator.&lt;locals&gt;.wrapper</span><span class="ansi-blue-fg">(*args, **kwargs)</span>
 <span class="ansi-green-intense-fg ansi-bold">     74</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">else</span>:
@@ -8806,7 +8837,7 @@ File <span class="ansi-green-fg">~/.pyenv/versions/SEN122A_2025/lib/python3.12/s
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># This error occurs because the random parameter B_TC_rnd is defined but not used in the utility functions.</span>
@@ -8853,28 +8884,234 @@ File <span class="ansi-green-fg">~/.pyenv/versions/SEN122A_2025/lib/python3.12/s
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>
-
-Number of estimated parameters:	4
-Sample size:	1000
-Excluded observations:	0
-Init log likelihood:	-693.1434
-Final log likelihood:	-515.2587
-Likelihood ratio test for the init. model:	355.7692
-Rho-square for the init. model:	0.257
-Rho-square-bar for the init. model:	0.251
-Akaike Information Criterion:	1038.517
-Bayesian Information Criterion:	1058.148
-Final gradient norm:	1.4141E-03
-Number of draws:	2000
-Draws generation time:	0:00:01.555709
-Types of draws:	['B_TC_rnd: NORMAL']
-Nbr of threads:	10
+Estimation finished
+Cause of termination           : Relative gradient = 0.00011 &lt;= 0.00012
+Number of iterations           :           35
+Estimation time                :      0:00:43
+Number of estimated parameters :            4
+Number of individuals          :         1000
+Excluded observations          :            0
+Init log likelihood            :      -693.07
+Final log likelihood           :      -515.26
+Bayesian Information Criterion :      1058.14
+Number of threads              :           10
+Number of draws                :         2000
+Types of draws                 : ['B_TC_rnd: NORMAL']
 
            Value  Rob. Std err  Rob. t-test  Rob. p-value
-ASC2      0.9818        0.2926         3.36          0.00
-B_TC     -0.3431        0.0955        -3.59          0.00
-B_TT     -0.1153        0.0303        -3.80          0.00
-sigma_TC  0.8042        0.4297         1.87          0.06
+ASC2      0.9829        0.2909         3.38          0.00
+B_TC     -0.3461        0.0937        -3.70          0.00
+B_TT     -0.1139        0.0301        -3.78          0.00
+sigma_TC  0.7783        0.4309         1.81          0.07
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=56c6557c">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<hr/>
+<br/>
+<p><code>BiogemeError: Invalid expression during multiplication to Beta:</code></p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=f5c642b3">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [53]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Load wide data</span>
+<span class="n">data_path</span> <span class="o">=</span>  <span class="n">Path</span><span class="p">(</span><span class="sa">f</span><span class="s1">'data/synthetic_VTTdata_tutorial1_wide.csv'</span><span class="p">)</span>
+<span class="n">df_wide</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">data_path</span><span class="p">)</span>
+
+<span class="c1"># Create Biogeme database object</span>
+<span class="n">biodata_wide</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Database</span><span class="p">(</span><span class="s1">'synthetic_VTTdata_tutorial1_wide'</span><span class="p">,</span> <span class="n">df_wide</span><span class="p">)</span>
+<span class="n">obs_per_ind</span> <span class="o">=</span> <span class="mi">5</span> <span class="c1"># Number of observations per individual</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=7893eb54">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [54]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Make dictionaries with the Biogeme variables from the wide database</span>
+<span class="n">TT1</span>   <span class="o">=</span>   <span class="p">{</span><span class="n">q</span><span class="p">:</span> <span class="n">Variable</span><span class="p">(</span><span class="sa">f</span><span class="s1">'TT1_</span><span class="si">{</span><span class="n">q</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span> <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">obs_per_ind</span><span class="p">)}</span>
+<span class="n">TT2</span>   <span class="o">=</span>   <span class="p">{</span><span class="n">q</span><span class="p">:</span> <span class="n">Variable</span><span class="p">(</span><span class="sa">f</span><span class="s1">'TT2_</span><span class="si">{</span><span class="n">q</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span> <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">obs_per_ind</span><span class="p">)}</span>
+<span class="n">TC1</span>   <span class="o">=</span>   <span class="p">{</span><span class="n">q</span><span class="p">:</span> <span class="n">Variable</span><span class="p">(</span><span class="sa">f</span><span class="s1">'TC1_</span><span class="si">{</span><span class="n">q</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span> <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">obs_per_ind</span><span class="p">)}</span>
+<span class="n">TC2</span>   <span class="o">=</span>   <span class="p">{</span><span class="n">q</span><span class="p">:</span> <span class="n">Variable</span><span class="p">(</span><span class="sa">f</span><span class="s1">'TC2_</span><span class="si">{</span><span class="n">q</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span> <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">obs_per_ind</span><span class="p">)}</span>
+<span class="n">CHOICE</span>  <span class="o">=</span>   <span class="p">{</span><span class="n">q</span><span class="p">:</span> <span class="n">Variable</span><span class="p">(</span><span class="sa">f</span><span class="s1">'CHOICE_</span><span class="si">{</span><span class="n">q</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span> <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">obs_per_ind</span><span class="p">)}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=bfc80840">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [55]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Estimate the panel mixed logit model using the wide data</span>
+<span class="n">model_name</span> <span class="o">=</span> <span class="s1">'Panel MXL'</span>
+
+<span class="c1"># Parameters definition enabling the construction of random parameters</span>
+<span class="n">B_tc</span>     <span class="o">=</span> <span class="n">Beta</span><span class="p">(</span><span class="s1">'b_tc'</span><span class="p">,</span>       <span class="o">-</span><span class="mf">0.4</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>    
+<span class="n">B_tt</span>     <span class="o">=</span> <span class="n">Beta</span><span class="p">(</span><span class="s1">'b_tt'</span><span class="p">,</span>       <span class="o">-</span><span class="mf">0.1</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">sigma_tt</span> <span class="o">=</span> <span class="n">Beta</span><span class="p">(</span><span class="s1">'sigma_tt'</span><span class="p">,</span>   <span class="mf">0.1</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Construction of random parameters   </span>
+<span class="n">B_tt_rnd</span> <span class="o">=</span> <span class="n">B_tt</span> <span class="o">+</span> <span class="n">sigma_tt</span> <span class="o">*</span> <span class="n">bioDraws</span><span class="p">(</span><span class="s1">'B_tt_rnd'</span><span class="p">,</span> <span class="s1">'NORMAL_HALTON2'</span><span class="p">)</span>
+
+<span class="c1"># Definition of the utility functions</span>
+<span class="n">V1</span> <span class="o">=</span> <span class="n">B_tc</span> <span class="o">*</span> <span class="n">TC1</span> <span class="o">+</span> <span class="n">B_tt_rnd</span> <span class="o">*</span> <span class="n">TT1</span>
+<span class="n">V2</span> <span class="o">=</span> <span class="n">B_tc</span> <span class="o">*</span> <span class="n">TC2</span> <span class="o">+</span> <span class="n">B_tt_rnd</span> <span class="o">*</span> <span class="n">TT2</span>
+<span class="c1"># V1 = [B_tc * TC1 + B_tt_rnd * TT1 for q in range(obs_per_ind)]</span>
+<span class="c1"># V2 = [B_tc * TC2 + B_tt_rnd * TT2 for q in range(obs_per_ind)]</span>
+
+<span class="c1"># Create a dictionary to list the utility functions with the numbering of alternatives</span>
+<span class="n">V</span> <span class="o">=</span> <span class="p">[{</span><span class="mi">1</span><span class="p">:</span> <span class="n">V1</span><span class="p">[</span><span class="n">q</span><span class="p">],</span> <span class="mi">2</span><span class="p">:</span> <span class="n">V2</span><span class="p">[</span><span class="n">q</span><span class="p">]}</span> <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">obs_per_ind</span><span class="p">)]</span>
+           
+<span class="c1"># Create a dictionary to describe the availability conditions of each alternative</span>
+<span class="n">AV</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="mi">1</span><span class="p">}</span>
+
+<span class="c1"># Estimate the model using the estimate_panel_mxl function</span>
+<span class="n">results_panel_mxl</span> <span class="o">=</span> <span class="n">estimate_panel_mxl</span><span class="p">(</span><span class="n">V</span><span class="p">,</span><span class="n">AV</span><span class="p">,</span><span class="n">CHOICE</span><span class="p">,</span><span class="n">obs_per_ind</span><span class="p">,</span><span class="n">biodata_wide</span><span class="p">,</span><span class="n">model_name</span><span class="p">,</span><span class="n">num_draws</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="c1"># Print the results</span>
+<span class="n">print_results</span><span class="p">(</span><span class="n">results_panel_mxl</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">BiogemeError</span>                              Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[55], line 13</span>
+<span class="ansi-green-intense-fg ansi-bold">     10</span> B_tt_rnd <span style="color: rgb(98,98,98)">=</span> B_tt <span style="color: rgb(98,98,98)">+</span> sigma_tt <span style="color: rgb(98,98,98)">*</span> bioDraws(<span style="color: rgb(175,0,0)">'</span><span style="color: rgb(175,0,0)">B_tt_rnd</span><span style="color: rgb(175,0,0)">'</span>, <span style="color: rgb(175,0,0)">'</span><span style="color: rgb(175,0,0)">NORMAL_HALTON2</span><span style="color: rgb(175,0,0)">'</span>)
+<span class="ansi-green-intense-fg ansi-bold">     12</span> <span style="color: rgb(95,135,135)"># Definition of the utility functions</span>
+<span class="ansi-green-fg">---&gt; 13</span> V1 <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">B_tc</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">*</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">TC1</span> <span style="color: rgb(98,98,98)">+</span> B_tt_rnd <span style="color: rgb(98,98,98)">*</span> TT1
+<span class="ansi-green-intense-fg ansi-bold">     14</span> V2 <span style="color: rgb(98,98,98)">=</span> B_tc <span style="color: rgb(98,98,98)">*</span> TC2 <span style="color: rgb(98,98,98)">+</span> B_tt_rnd <span style="color: rgb(98,98,98)">*</span> TT2
+<span class="ansi-green-intense-fg ansi-bold">     15</span> <span style="color: rgb(95,135,135)"># V1 = [B_tc * TC1 + B_tt_rnd * TT1 for q in range(obs_per_ind)]</span>
+<span class="ansi-green-intense-fg ansi-bold">     16</span> <span style="color: rgb(95,135,135)"># V2 = [B_tc * TC2 + B_tt_rnd * TT2 for q in range(obs_per_ind)]</span>
+<span class="ansi-green-intense-fg ansi-bold">     17</span> 
+<span class="ansi-green-intense-fg ansi-bold">     18</span> <span style="color: rgb(95,135,135)"># Create a dictionary to list the utility functions with the numbering of alternatives</span>
+
+File <span class="ansi-green-fg">~/.pyenv/versions/SEN122A_2025/lib/python3.12/site-packages/biogeme/expressions/base_expressions.py:286</span>, in <span class="ansi-cyan-fg">Expression.__mul__</span><span class="ansi-blue-fg">(self, other)</span>
+<span class="ansi-green-intense-fg ansi-bold">    282</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> (is_numeric(other) <span class="ansi-bold" style="color: rgb(175,0,255)">or</span> <span style="color: rgb(0,135,0)">isinstance</span>(other, Expression)):
+<span class="ansi-green-intense-fg ansi-bold">    283</span>     error_msg <span style="color: rgb(98,98,98)">=</span> (
+<span class="ansi-green-intense-fg ansi-bold">    284</span>         <span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">"</span><span style="color: rgb(175,0,0)">Invalid expression during multiplication </span><span style="color: rgb(175,0,0)">"</span> <span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">"</span><span style="color: rgb(175,0,0)">to </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span><span style="color: rgb(0,135,0)">self</span><span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">: [</span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>other<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">]</span><span style="color: rgb(175,0,0)">"</span>
+<span class="ansi-green-intense-fg ansi-bold">    285</span>     )
+<span class="ansi-green-fg">--&gt; 286</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> BiogemeError(error_msg)
+<span class="ansi-green-intense-fg ansi-bold">    287</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span><span style="color: rgb(188,188,188)"> </span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">binary_expressions</span><span style="color: rgb(188,188,188)"> </span><span class="ansi-bold" style="color: rgb(0,135,0)">import</span> Times
+<span class="ansi-green-intense-fg ansi-bold">    289</span> <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> Times(<span style="color: rgb(0,135,0)">self</span>, other)
+
+<span class="ansi-red-fg">BiogemeError</span>: Invalid expression during multiplication to Beta('b_tc', -0.4, None, None, 0): [{0: TC1_0, 1: TC1_1, 2: TC1_2, 3: TC1_3, 4: TC1_4}]</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=a06f2f4a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># The error occurs because biogeme expects the utility functions V1 and V2 to be defined as a list of expressions for each observation in the sequence.</span>
+<span class="c1"># To fix this, you need to define V1 and V2 use a list comprehension that iterates over the observations per individual, and constructs the utility functions for each observation in the sequence.</span>
+
+<span class="c1"># Estimate the panel mixed logit model using the wide data</span>
+<span class="n">model_name</span> <span class="o">=</span> <span class="s1">'Panel MXL'</span>
+
+<span class="c1"># Parameters definition enabling the construction of random parameters</span>
+<span class="n">B_tc</span>     <span class="o">=</span> <span class="n">Beta</span><span class="p">(</span><span class="s1">'b_tc'</span><span class="p">,</span>       <span class="o">-</span><span class="mf">0.4</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>    
+<span class="n">B_tt</span>     <span class="o">=</span> <span class="n">Beta</span><span class="p">(</span><span class="s1">'b_tt'</span><span class="p">,</span>       <span class="o">-</span><span class="mf">0.1</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">sigma_tt</span> <span class="o">=</span> <span class="n">Beta</span><span class="p">(</span><span class="s1">'sigma_tt'</span><span class="p">,</span>   <span class="mf">0.1</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Construction of random parameters   </span>
+<span class="n">B_tt_rnd</span> <span class="o">=</span> <span class="n">B_tt</span> <span class="o">+</span> <span class="n">sigma_tt</span> <span class="o">*</span> <span class="n">bioDraws</span><span class="p">(</span><span class="s1">'B_tt_rnd'</span><span class="p">,</span> <span class="s1">'NORMAL_HALTON2'</span><span class="p">)</span>
+
+<span class="c1"># Definition of the utility functions</span>
+<span class="n">V1</span> <span class="o">=</span> <span class="p">[</span><span class="n">B_tc</span> <span class="o">*</span> <span class="n">TC1</span><span class="p">[</span><span class="n">q</span><span class="p">]</span> <span class="o">+</span> <span class="n">B_tt_rnd</span> <span class="o">*</span> <span class="n">TT1</span><span class="p">[</span><span class="n">q</span><span class="p">]</span> <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">obs_per_ind</span><span class="p">)]</span> <span class="c1"># &lt;-- FIXED by using a list comprehension to define V1</span>
+<span class="n">V2</span> <span class="o">=</span> <span class="p">[</span><span class="n">B_tc</span> <span class="o">*</span> <span class="n">TC2</span><span class="p">[</span><span class="n">q</span><span class="p">]</span> <span class="o">+</span> <span class="n">B_tt_rnd</span> <span class="o">*</span> <span class="n">TT2</span><span class="p">[</span><span class="n">q</span><span class="p">]</span> <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">obs_per_ind</span><span class="p">)]</span> <span class="c1"># &lt;-- FIXED by using a list comprehension to define V2</span>
+
+<span class="c1"># Create a dictionary to list the utility functions with the numbering of alternatives</span>
+<span class="n">V</span> <span class="o">=</span> <span class="p">[{</span><span class="mi">1</span><span class="p">:</span> <span class="n">V1</span><span class="p">[</span><span class="n">q</span><span class="p">],</span> <span class="mi">2</span><span class="p">:</span> <span class="n">V2</span><span class="p">[</span><span class="n">q</span><span class="p">]}</span> <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">obs_per_ind</span><span class="p">)]</span>
+           
+<span class="c1"># Create a dictionary to describe the availability conditions of each alternative</span>
+<span class="n">AV</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="mi">1</span><span class="p">}</span>
+
+<span class="c1"># Estimate the model using the estimate_panel_mxl function</span>
+<span class="n">results_panel_mxl</span> <span class="o">=</span> <span class="n">estimate_panel_mxl</span><span class="p">(</span><span class="n">V</span><span class="p">,</span><span class="n">AV</span><span class="p">,</span><span class="n">CHOICE</span><span class="p">,</span><span class="n">obs_per_ind</span><span class="p">,</span><span class="n">biodata_wide</span><span class="p">,</span><span class="n">model_name</span><span class="p">,</span><span class="n">num_draws</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="c1"># Print the results</span>
+<span class="n">print_results</span><span class="p">(</span><span class="n">results_panel_mxl</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>The number of draws (100) is low. The results may not be meaningful.
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>
+Estimation finished
+Cause of termination           : Relative gradient = 6.1e-05 &lt;= 0.00012
+Number of iterations           :           32
+Estimation time                :      0:00:02
+Number of estimated parameters :            3
+Number of individuals          :          200
+Excluded observations          :            0
+Null log likelihood            :      -693.15
+Init log likelihood            :      -594.37
+Final log likelihood           :      -525.23
+Rho-square for the null model  :        0.242
+Bayesian Information Criterion :      1066.36
+Number of threads              :           10
+Number of draws                :          100
+Types of draws                 : ['B_tt_rnd: NORMAL_HALTON2']
+
+           Value  Rob. Std err  Rob. t-test  Rob. p-value
+b_tc     -0.2060        0.0389        -5.30           0.0
+b_tt     -0.1451        0.0157        -9.26           0.0
+sigma_tt  0.0474        0.0141         3.36           0.0
 </pre>
 </div>
 </div>
@@ -8887,6 +9124,7 @@ sigma_TC  0.8042        0.4297         1.87          0.06
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<hr/>
 <br/>
 <p><code>BiogemeError: The following elementary expressions are defined more than once:</code></p>
 </div>
@@ -8897,7 +9135,7 @@ sigma_TC  0.8042        0.4297         1.87          0.06
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Create a Biogeme database object from the pandas DataFrame </span>
@@ -8946,17 +9184,17 @@ sigma_TC  0.8042        0.4297         1.87          0.06
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">BiogemeError</span>                              Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[21], line 31</span>
+Cell <span class="ansi-green-fg">In[27], line 31</span>
 <span class="ansi-green-intense-fg ansi-bold">     28</span> av <span style="color: rgb(98,98,98)">=</span> {<span style="color: rgb(98,98,98)">1</span>: <span style="color: rgb(98,98,98)">1</span>, <span style="color: rgb(98,98,98)">2</span>: <span style="color: rgb(98,98,98)">1</span>} 
 <span class="ansi-green-intense-fg ansi-bold">     30</span> <span style="color: rgb(95,135,135)"># Estimate the model</span>
 <span class="ansi-green-fg">---&gt; 31</span> results_mnl <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">estimate_mnl</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">V</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">AV</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">CHOICE</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">biodata</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">model_name</span><span class="ansi-yellow-bg">)</span>
 
-File <span class="ansi-green-fg">~/Documents/Repos_and_data/SEN1221/tutorials/utils/bio_estimation_fcns.py:20</span>, in <span class="ansi-cyan-fg">estimate_mnl</span><span class="ansi-blue-fg">(V, AV, CHOICE, database, model_name)</span>
-<span class="ansi-green-intense-fg ansi-bold">     17</span> LL <span style="color: rgb(98,98,98)">=</span> log(prob)
-<span class="ansi-green-intense-fg ansi-bold">     19</span> <span style="color: rgb(95,135,135)"># Create the Biogeme object containing the object database and the formula for the contribution to the log-likelihood of each row using the following syntax:</span>
-<span class="ansi-green-fg">---&gt; 20</span> biogeme <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">bio</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">BIOGEME</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">database</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">LL</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     22</span> <span style="color: rgb(95,135,135)"># The following syntax passes the name of the model:</span>
-<span class="ansi-green-intense-fg ansi-bold">     23</span> biogeme<span style="color: rgb(98,98,98)">.</span>modelName <span style="color: rgb(98,98,98)">=</span> model_name
+File <span class="ansi-green-fg">~/Documents/Repos_and_data/SEN1221/tutorials/utils/bio_estimation_fcns.py:21</span>, in <span class="ansi-cyan-fg">estimate_mnl</span><span class="ansi-blue-fg">(V, AV, CHOICE, database, model_name)</span>
+<span class="ansi-green-intense-fg ansi-bold">     18</span> LL <span style="color: rgb(98,98,98)">=</span> log(prob)
+<span class="ansi-green-intense-fg ansi-bold">     20</span> <span style="color: rgb(95,135,135)"># Create the Biogeme object containing the object database and the formula for the contribution to the log-likelihood of each row using the following syntax:</span>
+<span class="ansi-green-fg">---&gt; 21</span> biogeme <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">bio</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">BIOGEME</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">database</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">LL</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     23</span> <span style="color: rgb(95,135,135)"># The following syntax passes the name of the model:</span>
+<span class="ansi-green-intense-fg ansi-bold">     24</span> biogeme<span style="color: rgb(98,98,98)">.</span>modelName <span style="color: rgb(98,98,98)">=</span> model_name
 
 File <span class="ansi-green-fg">~/.pyenv/versions/SEN122A_2025/lib/python3.12/site-packages/biogeme/deprecated.py:77</span>, in <span class="ansi-cyan-fg">deprecated_parameters.&lt;locals&gt;.decorator.&lt;locals&gt;.wrapper</span><span class="ansi-blue-fg">(*args, **kwargs)</span>
 <span class="ansi-green-intense-fg ansi-bold">     74</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">else</span>:
